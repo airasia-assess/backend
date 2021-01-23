@@ -1,11 +1,11 @@
 {
-  "name": "airasia",
+  "name": "airasia-assess",
   "version": "1.0.0",
   "description": "a test challenge for airasia company",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "nodemon --inspect server.js"
   },
   "author": "ashi-dev",
   "license": "ISC",
