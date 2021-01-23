@@ -17,11 +17,17 @@ db design
     token:"eyJhbGciOiJIUzI1NiJ9.NjAwYWVjNGMzMGM5Y2YxNDA2YmMwN2Ex.I3y1MhBR3lXfoGby..."
 
 apis instructions:
-- 'api/signup'
-  1. the request body is like this:
+- '/api/signup': post method
+  1. request body
     {
         "name": "name",
         "username": "username",
         "email": "username@email.com",
         "pass": "pass"
+    }
+  2. response body:
+    {
+        "success": false or true,
+        "errMessage": "error message",
+        "token": "eyJhbGciOiJIUzI1NiJ9.NjAwYWVjNGMzMGM5Y2YxNDA2YmMwN2Ex.I3y1MhBR3lXfoGby..."
     }
