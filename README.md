@@ -4,6 +4,7 @@ airasia super assessment backend repo
 This is node.js app and you can run it via 'npm start' command.
 it will run locally on port 1026 as you can see in terminal.
 it should open to using internet to connect mongodb on aws.
+I used router, controller and service architecture.
 
 db design
 - tables
@@ -17,7 +18,7 @@ db design
     token:"eyJhbGciOiJIUzI1NiJ9.NjAwYWVjNGMzMGM5Y2YxNDA2YmMwN2Ex.I3y1MhBR3lXfoGby..."
 
 apis instructions:
-- '/api/signup': post method
+- '/api/auth/signup': post method
   1. request body
     {
         "name": "name",
@@ -28,6 +29,6 @@ apis instructions:
   2. response body:
     {
         "success": false or true,
-        "errMessage": "error message",
+        "errMsg": "error message if exists",
         "token": "eyJhbGciOiJIUzI1NiJ9.NjAwYWVjNGMzMGM5Y2YxNDA2YmMwN2Ex.I3y1MhBR3lXfoGby..."
     }
