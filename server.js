@@ -38,3 +38,5 @@ const http = require("http").createServer(app);
 http.listen(port, () =>
   console.log(`${enums.msgs.SERVER_CONNECT} ${port}`)
 );
+
+module.exports = app;
