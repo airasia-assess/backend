@@ -5,6 +5,7 @@ module.exports = Object.freeze({
         SERVER_CONNECT: "server started on port"
     },
     errs: {
-        USER_EXIST: "username or email or both already exist in db"
+        DB_NOT_CONNECT: "db is not connected =>",
+        USER_EXIST: "username and email already exist in db"
     }
 })

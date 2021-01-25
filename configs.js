@@ -5,7 +5,6 @@ const config = {
   },
   default: {
     SECRET: "secretkey",
-    // DATABASE: 'mongodb://localhost:27017/airasia-assess'
     DATABASE:
       "mongodb+srv://mongodb:fPVK6QiB0t0qWh72@airasia-assess.g7uey.mongodb.net/airasia-assess?retryWrites=true&w=majority",
   },
