@@ -5,10 +5,12 @@ const appRouter = require("./routers/app-router");
 const authRouter = require("./routers/auth-router");
 const enums = require("./enums");
 const configs = require("./configs");
+const cors = require("cors");
 
 const db = configs.get(process.env.NODE_ENV);
 
 const app = express();
+app.use(cors());
 app.use(bodyparser.urlencoded({ extended: false }));
 app.use(bodyparser.json());
 app.use(cookieParser());
