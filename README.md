@@ -1,5 +1,6 @@
 # backend
 airasia super assessment backend repo
+master branch is the latest stable version branch.
 
 This is node.js app and you can run it via 'npm start' command.
 it will run locally on port 1026 as you can see in terminal.
