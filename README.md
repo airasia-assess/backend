@@ -34,3 +34,19 @@ apis instructions:
         "errMsg": "error message if exists",
         "token": "eyJhbGciOiJIUzI1NiJ9.NjAwYWVjNGMzMGM5Y2YxNDA2YmMwN2Ex.I3y1MhBR3lXfoGby..."
     }
+    
+- '/api/auth/login': get method
+  1. request body: you can send username or email or both
+    {
+        "username": "username",
+        "email": "username@email.com",
+        "pass": "pass"
+    }
+  2. response body:
+    {
+        "success": false or true,
+        "errMsg": "error message if exists",
+        id: user id,
+        username: user username,
+        email: user email
+    }
