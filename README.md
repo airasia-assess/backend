@@ -1,5 +1,6 @@
 # backend
 airasia super assessment backend repo
+master branch is the latest stable version branch.
 
 This is node.js app and you can run it via 'npm start' command.
 it will run locally on port 1026 as you can see in terminal.
@@ -32,4 +33,20 @@ apis instructions:
         "success": false or true,
         "errMsg": "error message if exists",
         "token": "eyJhbGciOiJIUzI1NiJ9.NjAwYWVjNGMzMGM5Y2YxNDA2YmMwN2Ex.I3y1MhBR3lXfoGby..."
+    }
+    
+- '/api/auth/login': get method
+  1. request body: you can send username or email or both
+    {
+        "username": "username",
+        "email": "username@email.com",
+        "pass": "pass"
+    }
+  2. response body:
+    {
+        "success": false or true,
+        "errMsg": "error message if exists",
+        id: user id,
+        username: user username,
+        email: user email
     }
