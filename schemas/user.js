@@ -15,7 +15,7 @@ const userSchema = mongoose.Schema({
     type: String,
     required: true,
     maxlength: 15,
-    unique: 1,
+    unique: true,
   },
   pass: {
     type: String,
@@ -27,7 +27,7 @@ const userSchema = mongoose.Schema({
     type: String,
     required: true,
     maxlength: 60,
-    unique: 1,
+    unique: true,
   },
   dateCreated: {
     type: Date,
@@ -63,35 +63,34 @@ userSchema.pre("save", function (next) {
 });
 
 /** compare login pass and db pass */
-userSchema.methods.comparepassword = function (password, cb) {
-  bcrypt.compare(password, this.pass, (err, isMatch) => {
-    if (err) return cb(next);
-    cb(null, isMatch);
-  });
+userSchema.methods.comparepassword = async (passes) => {
+  const isMatch = await bcrypt.compare(passes.loginPass, passes.dbPass);
+  return isMatch;
 };
 
 /** generate user token */
-userSchema.methods.generateToken = function (cb) {
+userSchema.methods.generateToken = async function () {
   var user = this;
-  var token = jwt.sign(user._id.toHexString(), confiq.SECRET);
+  const hex = user._id.toHexString();
+  var token = jwt.sign({ hex }, confiq.SECRET, {
+    expiresIn: "6h",
+  });
 
   user.token = token;
-  user.save(function (err, user) {
-    if (err) return cb(err);
-    cb(null, user);
-  });
+  const dbUser = await user.save();
+  return dbUser;
 };
 
 /** find a particular logged in token in db */
-userSchema.statics.findByToken = function (token, cb) {
+userSchema.statics.findByToken = async function (token) {
+  if (!token) {
+    return null;
+  }
   var user = this;
 
-  jwt.verify(token, confiq.SECRET, function (err, decode) {
-    user.findOne({ _id: decode, token: token }, function (err, user) {
-      if (err) return cb(err);
-      cb(null, user);
-    });
-  });
+  const decode = await jwt.verify(token, confiq.SECRET);
+  const dbUser = await user.findOne({ _id: decode, token: token });
+  return dbUser;
 };
 
 /** delete token on user logout */

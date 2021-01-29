@@ -4,7 +4,7 @@
   "description": "a test challenge for airasia company",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "nyc mocha ./tests",
     "start": "nodemon --inspect server.js"
   },
   "author": "ashi-dev",
@@ -24,6 +24,7 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
-    "mocha": "^8.2.1"
+    "mocha": "^8.2.1",
+    "sinon": "^9.2.4"
   }
 }
