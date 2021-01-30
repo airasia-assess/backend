@@ -1,7 +1,7 @@
 const config = {
   production: {
     SECRET: process.env.SECRET,
-    DATABASE: "mongodb+srv://mongodb:fPVK6QiB0t0qWh72@airasia-assess.g7uey.mongodb.net/airasia-assess?retryWrites=true&w=majority",
+    DATABASE: process.env.MONGODB_URI,
   },
   default: {
     SECRET: "secretkey",
