@@ -2,11 +2,11 @@
   "name": "airasia-assess",
   "version": "1.0.0",
   "description": "a test challenge for airasia company",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
     "test": "nyc mocha ./tests",
     "refresher": "nodemon --inspect server.js",
-    "start": "node server.js"
+    "start": "node app.js"
   },
   "author": "ashi-dev",
   "license": "ISC",
