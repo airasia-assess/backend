@@ -35,5 +35,5 @@ mongoose.connect(
 app.use("/", appRouter);
 app.use("/api/auth", authRouter);
 
-const port = process.env.port || 1026;
+const port = process.env.PORT || 1026;
 app.listen(port, () => console.log(`${enums.msgs.SERVER_CONNECT} ${port}`));
