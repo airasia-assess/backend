@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "nyc mocha ./tests",
-    "start": "nodemon --inspect server.js"
+    "start": "node server.js",
+    "refresher": "nodemon --inspect server.js"
   },
   "author": "ashi-dev",
   "license": "ISC",
