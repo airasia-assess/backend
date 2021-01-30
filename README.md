@@ -64,6 +64,8 @@ deploy backend on minikube:
   - we have to delete the svc and create the service again:
     1. Kubectl delete svc nodejs-deployment
     2. kubectl expose deployment  nodejs-deployment --type="LoadBalancer"
+  - you can get the minikube api url via: minikube ip
+    The API server runs on 8443 by default.
   
   
   
