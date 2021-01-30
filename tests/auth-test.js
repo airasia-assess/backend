@@ -7,7 +7,7 @@ describe('GET existing user according to filter', () => {
       .get('/findExistUser')
       .end((err, res) => {
         res.should.have.status(200);
-        expect(res.body).to.deep.equal(starwarsFilmListMock);
+        expect(res.body).to.deep.equal(userMock);
         done();
       });
   });
