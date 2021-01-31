@@ -36,7 +36,7 @@ apis instructions:
         "token": "eyJhbGciOiJIUzI1NiJ9.NjAwYWVjNGMzMGM5Y2YxNDA2YmMwN2Ex.I3y1MhBR3lXfoGby..."
     }
     
-- '/api/auth/login': get method
+- '/api/auth/login': post method
   1. request body: you can send username or email or both
     {
         "username": "username",
