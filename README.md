@@ -6,7 +6,10 @@ This is node.js app and you can run it via 'npm start' command.
 it will run locally on port 1026 as you can see in terminal.
 it should open to using internet to connect mongodb on aws.
 I used router, controller and service architecture.
+
 you can pull this server image from docker hub: docker pull 19860906/auth-service:latest
+I exposed it on port 1026 and http.
+
 heroku deployed url: https://airasia-auth-service-backend.herokuapp.com/
 
 db design
