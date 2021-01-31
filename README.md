@@ -51,3 +51,25 @@ apis instructions:
         username: user username,
         email: user email
     }
+    
+deploy backend on minikube:
+  - after starting minikube, To see the kubectl configuration use the command: kubectl config view
+  - create a deployment: kubectl create -f kubectl-deploy.yaml
+  - we’re going live through Kubernetes service object: kubectl expose deployment nodejs-deployment --type="LoadBalancer"
+  - getting an external IP:
+    1. kubectl apply -f https://raw.githubusercontent.com/google/metallb/v0.9.3/manifests/namespace.yaml
+    2. kubectl apply -f https://raw.githubusercontent.com/google/metallb/v0.9.3/manifests/metallb.yaml # On the first install only
+    3. kubectl create secret generic -n metallb-system memberlist --from-literal=secretkey="$(openssl rand -base64 128)"
+  - run command: kubectl create -f configmap.yaml
+  - we have to delete the svc and create the service again:
+    1. Kubectl delete svc nodejs-deployment
+    2. kubectl expose deployment  nodejs-deployment --type="LoadBalancer"
+  - you can get the minikube api url via: minikube ip
+    The API server runs on 8443 by default.
+  
+  
+  
+  
+  
+  
+  
