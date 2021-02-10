@@ -3,6 +3,7 @@ const bodyparser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const appRouter = require("./routers/app-router");
 const authRouter = require("./routers/auth-router");
+const permissionRouter = require("./routers/permission-router");
 const enums = require("./enums");
 const configs = require("./configs");
 const cors = require("cors");
@@ -34,6 +35,7 @@ mongoose.connect(
 
 app.use("/", appRouter);
 app.use("/api/auth", authRouter);
+app.use("/api/permission", permissionRouter);
 
 const port = process.env.PORT || 1026;
 app.listen(port, () => console.log(`${enums.msgs.SERVER_CONNECT} ${port}`));
