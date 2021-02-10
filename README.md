@@ -15,13 +15,67 @@ heroku deployed url: https://airasia-auth-service-backend.herokuapp.com/
 db design
 - tables
   1. users
-    name:"name"
-    username:"username"
-    email:"username@email.com"
-    pass:"$2b$10$3MPxuH5/ue93xWU6YHkxXe5M2AJVsRwx.qUQhRQIu2XFkynmSKkWe"
-    dateCreated:2021-01-22T15:16:28.719+00:00
-    active:true
-    token:"eyJhbGciOiJIUzI1NiJ9.NjAwYWVjNGMzMGM5Y2YxNDA2YmMwN2Ex.I3y1MhBR3lXfoGby..."
+    {
+      name: {
+        type: String,
+        required: true,
+        maxlength: 150,
+      },
+      username: {
+        type: String,
+        required: true,
+        maxlength: 15,
+        unique: true,
+      },
+      pass: {
+        type: String,
+        required: true,
+        maxlength: 60,
+        minlength: 6,
+      },
+      email: {
+        type: String,
+        required: true,
+        maxlength: 60,
+        unique: true,
+      },
+      dateCreated: {
+        type: Date,
+        required: true,
+      },
+      active: {
+        type: Boolean,
+        required: true,
+      },
+      token: String,
+      data: String
+    }
+    
+  2. permissions
+    {
+      code: {
+        type: String,
+        required: true,
+        maxlength: 6,
+        minlength: 2,
+        unique: true,
+      },
+      name: {
+        type: String,
+        required: true,
+        maxlength: 60,
+        minlength: 6
+      },
+      dateCreated: {
+        type: Date,
+        required: true,
+      },
+      active: {
+        type: Boolean,
+        required: true,
+      },
+      data: String
+    }
 
 apis instructions:
 - '/api/auth/signup': post method
@@ -32,7 +86,7 @@ apis instructions:
         "email": "username@email.com",
         "pass": "pass"
     }
-  2. response body:
+  2. response body
     {
         "success": false or true,
         "errMsg": "error message if exists",
@@ -46,13 +100,39 @@ apis instructions:
         "email": "username@email.com",
         "pass": "pass"
     }
-  2. response body:
+  2. response body
     {
         "success": false or true,
         "errMsg": "error message if exists",
         id: user id,
         username: user username,
         email: user email
+    }
+    
+- '/api/permission/permissions': post method
+  1. request body
+    {
+        "code": "permission code",
+        "name": "permission name"
+    }
+  2. response body
+    {
+        "success": false or true,
+        "errMsg": "error message if exists",
+        "permission": "permission description"
+    }
+    
+- '/api/permission/permissions': get method
+  1. request body: it doesn't contain request body
+  2. response body
+    {
+        "success": false or true,
+        "errMsg": "error message if exists",
+        "permissions": [
+          {
+            list of permissions
+          }
+        ]
     }
     
 deploy backend on minikube:
