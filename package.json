@@ -4,7 +4,7 @@
   "description": "a test challenge for airasia company",
   "main": "server.js",
   "scripts": {
-    "test": "nyc mocha ./tests",
+    "test": "mocha --debug-brk --inspect=1036 ./tests",
     "refresher": "nodemon --inspect server.js",
     "start": "node server.js"
   },
@@ -13,19 +13,19 @@
   "dependencies": {
     "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
+    "chai": "^4.3.0",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "fs": "0.0.1-security",
     "http": "0.0.1-security",
     "jsonwebtoken": "^8.5.1",
+    "mocha": "^8.3.0",
     "mongoose": "^5.11.13",
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "sinon": "^9.2.4"
   },
   "devDependencies": {
-    "chai": "^4.2.0",
-    "chai-http": "^4.3.0",
-    "mocha": "^8.2.1",
-    "sinon": "^9.2.4"
+    "chai-http": "^4.3.0"
   }
 }

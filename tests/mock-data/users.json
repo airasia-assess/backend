@@ -1,0 +1,70 @@
+{
+  "users": [
+    {
+      "_id": { "$oid": "6023aa5997d9ac00156d8b87" },
+      "name": "ashi",
+      "username": "ashi",
+      "email": "ashi@email.com",
+      "pass": "$2b$10$KQ2YV6R3Gh62YhNftUDz6.nDJtXkTI9AMhniWE0X8fCihcKLKQJgm",
+      "dateCreated": { "$date": { "$numberLong": "1612950105655" } },
+      "active": true,
+      "token": "eyJhbGciOiJIUzI1NiJ9.NjAyM2FhNTk5N2Q5YWMwMDE1NmQ4Yjg3.7OhMYn5om5jCNA6D8_UKkQsiv4VAjN2kMZu47zPC8XM",
+      "__v": { "$numberInt": "0" }
+    },
+    {
+      "_id": { "$oid": "6023aa5997d9ac00156d8b06" },
+      "name": "ashi",
+      "username": "ashi2",
+      "email": "ashi2@email.com",
+      "pass": "$2b$10$KQ2YV6R3Gh62YhNftUDz6.nDJtXkTI9AMhniWE0X8fCihcKLKQJgm",
+      "dateCreated": { "$date": { "$numberLong": "1612950105655" } },
+      "active": true,
+      "token": "eyJhbGciOiJIUzI1NiJ9.NjAyM2FhNTk5N2Q5YWMwMDE1NmQ4Yjg3.7OhMYn5om5jCNA6D8_UKkQsiv4VAjN2kMZu47zPC8XM",
+      "__v": { "$numberInt": "0" }
+    },
+    {
+      "_id": { "$oid": "6023aa5997d9ac00156d8b09" },
+      "name": "ashi",
+      "username": "ashi3",
+      "email": "ashi3@email.com",
+      "pass": "$2b$10$KQ2YV6R3Gh62YhNftUDz6.nDJtXkTI9AMhniWE0X8fCihcKLKQJgm",
+      "dateCreated": { "$date": { "$numberLong": "1612950105655" } },
+      "active": true,
+      "token": "eyJhbGciOiJIUzI1NiJ9.NjAyM2FhNTk5N2Q5YWMwMDE1NmQ4Yjg3.7OhMYn5om5jCNA6D8_UKkQsiv4VAjN2kMZu47zPC8XM",
+      "__v": { "$numberInt": "0" }
+    },
+    {
+      "_id": { "$oid": "6023aa5997d9ac00156d8b15" },
+      "name": "ashi",
+      "username": "ashi4",
+      "email": "ashi4@email.com",
+      "pass": "$2b$10$KQ2YV6R3Gh62YhNftUDz6.nDJtXkTI9AMhniWE0X8fCihcKLKQJgm",
+      "dateCreated": { "$date": { "$numberLong": "1612950105655" } },
+      "active": true,
+      "token": "eyJhbGciOiJIUzI1NiJ9.NjAyM2FhNTk5N2Q5YWMwMDE1NmQ4Yjg3.7OhMYn5om5jCNA6D8_UKkQsiv4VAjN2kMZu47zPC8XM",
+      "__v": { "$numberInt": "0" }
+    },
+    {
+      "_id": { "$oid": "6023aa5997d9ac00156d8b19" },
+      "name": "ashi",
+      "username": "ashi5",
+      "email": "ashi5@email.com",
+      "pass": "$2b$10$KQ2YV6R3Gh62YhNftUDz6.nDJtXkTI9AMhniWE0X8fCihcKLKQJgm",
+      "dateCreated": { "$date": { "$numberLong": "1612950105655" } },
+      "active": true,
+      "token": "eyJhbGciOiJIUzI1NiJ9.NjAyM2FhNTk5N2Q5YWMwMDE1NmQ4Yjg3.7OhMYn5om5jCNA6D8_UKkQsiv4VAjN2kMZu47zPC8XM",
+      "__v": { "$numberInt": "0" }
+    },
+    {
+      "_id": { "$oid": "6023aa5997d9ac00156d8b26" },
+      "name": "ashi",
+      "username": "ashi6",
+      "email": "ashi6@email.com",
+      "pass": "$2b$10$KQ2YV6R3Gh62YhNftUDz6.nDJtXkTI9AMhniWE0X8fCihcKLKQJgm",
+      "dateCreated": { "$date": { "$numberLong": "1612950105655" } },
+      "active": true,
+      "token": "eyJhbGciOiJIUzI1NiJ9.NjAyM2FhNTk5N2Q5YWMwMDE1NmQ4Yjg3.7OhMYn5om5jCNA6D8_UKkQsiv4VAjN2kMZu47zPC8XM",
+      "__v": { "$numberInt": "0" }
+    }
+  ]
+}

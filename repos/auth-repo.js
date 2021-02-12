@@ -6,11 +6,6 @@ const User = require("../schemas/user");
  * @param {user entity} req
  */
 exports.findExistUser = async (req) => {
-  req = {
-    ...req,
-    dateCreated: new Date(),
-    active: true,
-  };
   const user = new User(req);
 
   const response = await User.findOne({

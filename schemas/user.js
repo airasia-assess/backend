@@ -32,10 +32,12 @@ const userSchema = mongoose.Schema({
   dateCreated: {
     type: Date,
     required: true,
+    default: new Date()
   },
   active: {
     type: Boolean,
     required: true,
+    default: true
   },
   token: String,
   data: String,

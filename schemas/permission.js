@@ -17,19 +17,14 @@ const permissionSchema = mongoose.Schema({
   dateCreated: {
     type: Date,
     required: true,
+    default: new Date()
   },
   active: {
     type: Boolean,
     required: true,
+    default: true
   },
   data: String,
-});
-
-permissionSchema.pre("validate", function (next) {
-  var permission = this;
-  permission.dateCreated = new Date();
-  permission.active = true;
-  next();
 });
 
 module.exports = mongoose.model("Permission", permissionSchema);
