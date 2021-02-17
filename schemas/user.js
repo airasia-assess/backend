@@ -32,12 +32,12 @@ const userSchema = mongoose.Schema({
   dateCreated: {
     type: Date,
     required: true,
-    default: new Date()
+    default: new Date(),
   },
   active: {
     type: Boolean,
     required: true,
-    default: true
+    default: true,
   },
   token: String,
   data: String,
@@ -84,14 +84,19 @@ userSchema.methods.generateToken = async function () {
 };
 
 /** find a particular logged in token in db */
-userSchema.statics.findByToken = async function (token) {
+userSchema.statics.findByToken = async function (req) {
+  const token = req.cookies.auth;
   if (!token) {
     return null;
   }
   var user = this;
 
   const decode = await jwt.verify(token, confiq.SECRET);
-  const dbUser = await user.findOne({ _id: decode, token: token });
+  const dbUser = await user.findOne({
+    _id: decode,
+    token: token,
+    $or: [{ username: req.body.username }, { email: req.body.email }],
+  });
   return dbUser;
 };
 

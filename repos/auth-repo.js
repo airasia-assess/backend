@@ -48,10 +48,10 @@ exports.signup = async (req) => {
 
 /**
  * find current logging in
- * @param {user token} token
+ * @param {user req} http req
  */
-exports.alreadyLoggedin = async (token) => {
-  const response = await User.findByToken(token);
+exports.alreadyLoggedin = async (req) => {
+  const response = await User.findByToken(req);
   if (response) {
     throw enums.errs.ALREADY_LOGGEDIN;
   }

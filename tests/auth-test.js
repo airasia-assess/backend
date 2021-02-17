@@ -22,22 +22,4 @@ describe("GET existing user according to filter", () => {
       assert.fail(ex);
     }
   });
-  // it("should return user entity if not exist in db", (done) => {
-  //   sinon.stub(authRepos, "findExistUser").returns(usersData);
-  //   const item = {
-  //     name: "ashi",
-  //     username: "ashi",
-  //     email: "ashi@email.com",
-  //     pass: "sixunderground2019",
-  //   };
-  //   authRepos
-  //     .findExistUser(item)
-  //     .then((response) => {
-  //       assert.notDeepEqual(response, item);
-  //     })
-  //     .catch((ex) => {
-  //       assert.fail(ex);
-  //     });
-  //   done();
-  // });
 });

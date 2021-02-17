@@ -18,11 +18,15 @@ exports.signup = async function (req, res) {
 exports.login = async function (req, res) {
   try {
     const user = await authServices.login(req);
-    res.cookie('auth', user.token).status(200).json({
+    const options = {
+      maxAge: 1000 * 60 * 60 * 6, // would expire after 6 hours
+      httpOnly: true, // The cookie only accessible by the web server
+    };
+    res.cookie("auth", user.token, options).status(200).json({
       success: true,
       id: user._id,
       username: user.username,
-      email: user.email
+      email: user.email,
     });
   } catch (err) {
     return res.status(400).json({

@@ -9,9 +9,14 @@ const configs = require("./configs");
 const cors = require("cors");
 
 const db = configs.get(process.env.NODE_ENV);
+const corsConfig = {
+  origin: true,
+  credentials: true,
+};
 
 const app = express();
-app.use(cors());
+app.use(cors(corsConfig));
+app.options('*', cors(corsConfig));
 app.use(bodyparser.urlencoded({ extended: false }));
 app.use(bodyparser.json());
 app.use(cookieParser());

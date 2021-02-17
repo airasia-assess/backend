@@ -1,8 +1,7 @@
 const User = require("./schemas/user");
 
 let auth = (req, res, next) => {
-  let token = req.cookies.auth;
-  User.findByToken(token, (err, user) => {
+  User.findByToken(req, (err, user) => {
     if (err) throw err;
     if (!user)
       return res.json({

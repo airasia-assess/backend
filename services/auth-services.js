@@ -15,7 +15,7 @@ exports.signup = async (req) => {
  * @param {login req dto} req 
  */
 exports.login = async (req) => {
-  const notLoggedin = await authRepos.alreadyLoggedin(req.cookies.auth);
+  const notLoggedin = await authRepos.alreadyLoggedin(req);
   const loginReqDto = req.body;
   const dbUser = await authRepos.findUserForLogin(loginReqDto);
   
