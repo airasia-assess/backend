@@ -20,7 +20,7 @@ exports.login = async function (req, res) {
     const user = await authServices.login(req);
     const options = {
       maxAge: 1000 * 60 * 60 * 6, // would expire after 6 hours
-      httpOnly: true, // The cookie only accessible by the web server
+      // httpOnly: true, // The cookie only accessible by the web server
     };
     res.cookie("auth", user.token, options).status(200).json({
       success: true,
