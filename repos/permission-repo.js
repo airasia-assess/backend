@@ -6,11 +6,6 @@ const Permission = require("../schemas/permission");
  * @param {permission entity} req
  */
 exports.findExistPermission = async (req) => {
-  // req = {
-  //   ...req,
-  //   dateCreated: new Date(),
-  //   active: true,
-  // };
   const permission = new Permission(req);
 
   const response = await Permission.findOne({

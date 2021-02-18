@@ -29,6 +29,7 @@ const userSchema = mongoose.Schema({
     maxlength: 60,
     unique: true,
   },
+  roles: [String],
   dateCreated: {
     type: Date,
     required: true,
@@ -86,7 +87,7 @@ userSchema.methods.generateToken = async function () {
 /** find a particular logged in token in db */
 userSchema.statics.findByToken = async function (req) {
   const token = req.cookies.auth;
-  console.log(`token: ${token}`)
+  console.log(`token: ${token}`);
   if (!token) {
     return null;
   }

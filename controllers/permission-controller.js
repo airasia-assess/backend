@@ -20,7 +20,11 @@ exports.regPermission = async function (req, res) {
   }
 };
 
-
+/**
+ * 
+ * @param {nothing} req 
+ * @param {list of permissions or err} res 
+ */
 exports.getAllPermissions = async function (req, res) {
   try {
     let permissions = await permissionServices.getPermissions();

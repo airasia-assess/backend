@@ -8,6 +8,7 @@ module.exports = Object.freeze({
     DB_NOT_CONNECT: "db is not connected =>",
     USER_EXIST: "username or email or both already exist in db",
     PERMISSION_EXIST: "permission already exist in db",
+    ROLE_EXIST: "Role code already exist in db",
     ALREADY_LOGGEDIN: "You are already logged in",
     USER_DEACTIVATE: "user has been deactivated",
     USER_NOT_FOUND: "Auth failed ,user not found",
