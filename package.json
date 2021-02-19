@@ -4,7 +4,7 @@
   "description": "a test challenge for airasia company",
   "main": "server.js",
   "scripts": {
-    "test": "mocha --debug-brk --inspect=1036 ./tests",
+    "test": "cd tests && jasmine",
     "refresher": "nodemon --inspect server.js",
     "start": "node server.js"
   },
@@ -17,15 +17,18 @@
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "faker": "^5.4.0",
     "fs": "0.0.1-security",
     "http": "0.0.1-security",
     "jsonwebtoken": "^8.5.1",
     "mocha": "^8.3.0",
+    "mongodb-memory-server": "^6.9.3",
     "mongoose": "^5.11.13",
     "nodemon": "^2.0.7",
     "sinon": "^9.2.4"
   },
   "devDependencies": {
-    "chai-http": "^4.3.0"
+    "chai-http": "^4.3.0",
+    "jasmine": "^3.6.4"
   }
 }

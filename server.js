@@ -8,6 +8,7 @@ const roleRouter = require("./routers/role-router");
 const enums = require("./enums");
 const configs = require("./configs");
 const cors = require("cors");
+const mongoose = require("mongoose");
 
 const db = configs.get(process.env.NODE_ENV);
 const corsConfig = {
@@ -17,19 +18,20 @@ const corsConfig = {
 
 const app = express();
 app.use(cors(corsConfig));
-app.options('*', cors(corsConfig));
+app.options("*", cors(corsConfig));
 app.use(bodyparser.urlencoded({ extended: false }));
 app.use(bodyparser.json());
 app.use(cookieParser());
 
-const mongoose = require("mongoose");
-mongoose.set("useNewUrlParser", true);
-mongoose.set("useFindAndModify", false);
-mongoose.set("useCreateIndex", true);
 mongoose.Promise = global.Promise;
 mongoose.connect(
   db.DATABASE,
-  { useNewUrlParser: true, useUnifiedTopology: true },
+  {
+    useNewUrlParser: true,
+    useFindAndModify: false,
+    useCreateIndex: true,
+    useUnifiedTopology: true,
+  },
   (err) => {
     if (err) {
       console.log(`${enums.errs.DB_NOT_CONNECT} ${err}`);

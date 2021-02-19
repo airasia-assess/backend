@@ -1,70 +1,46 @@
-{
-  "users": [
-    {
-      "_id": { "$oid": "6023aa5997d9ac00156d8b87" },
-      "name": "ashi",
-      "username": "ashi",
-      "email": "ashi@email.com",
-      "pass": "$2b$10$KQ2YV6R3Gh62YhNftUDz6.nDJtXkTI9AMhniWE0X8fCihcKLKQJgm",
-      "dateCreated": { "$date": { "$numberLong": "1612950105655" } },
-      "active": true,
-      "token": "eyJhbGciOiJIUzI1NiJ9.NjAyM2FhNTk5N2Q5YWMwMDE1NmQ4Yjg3.7OhMYn5om5jCNA6D8_UKkQsiv4VAjN2kMZu47zPC8XM",
-      "__v": { "$numberInt": "0" }
-    },
-    {
-      "_id": { "$oid": "6023aa5997d9ac00156d8b06" },
-      "name": "ashi",
-      "username": "ashi2",
-      "email": "ashi2@email.com",
-      "pass": "$2b$10$KQ2YV6R3Gh62YhNftUDz6.nDJtXkTI9AMhniWE0X8fCihcKLKQJgm",
-      "dateCreated": { "$date": { "$numberLong": "1612950105655" } },
-      "active": true,
-      "token": "eyJhbGciOiJIUzI1NiJ9.NjAyM2FhNTk5N2Q5YWMwMDE1NmQ4Yjg3.7OhMYn5om5jCNA6D8_UKkQsiv4VAjN2kMZu47zPC8XM",
-      "__v": { "$numberInt": "0" }
-    },
-    {
-      "_id": { "$oid": "6023aa5997d9ac00156d8b09" },
-      "name": "ashi",
-      "username": "ashi3",
-      "email": "ashi3@email.com",
-      "pass": "$2b$10$KQ2YV6R3Gh62YhNftUDz6.nDJtXkTI9AMhniWE0X8fCihcKLKQJgm",
-      "dateCreated": { "$date": { "$numberLong": "1612950105655" } },
-      "active": true,
-      "token": "eyJhbGciOiJIUzI1NiJ9.NjAyM2FhNTk5N2Q5YWMwMDE1NmQ4Yjg3.7OhMYn5om5jCNA6D8_UKkQsiv4VAjN2kMZu47zPC8XM",
-      "__v": { "$numberInt": "0" }
-    },
-    {
-      "_id": { "$oid": "6023aa5997d9ac00156d8b15" },
-      "name": "ashi",
-      "username": "ashi4",
-      "email": "ashi4@email.com",
-      "pass": "$2b$10$KQ2YV6R3Gh62YhNftUDz6.nDJtXkTI9AMhniWE0X8fCihcKLKQJgm",
-      "dateCreated": { "$date": { "$numberLong": "1612950105655" } },
-      "active": true,
-      "token": "eyJhbGciOiJIUzI1NiJ9.NjAyM2FhNTk5N2Q5YWMwMDE1NmQ4Yjg3.7OhMYn5om5jCNA6D8_UKkQsiv4VAjN2kMZu47zPC8XM",
-      "__v": { "$numberInt": "0" }
-    },
-    {
-      "_id": { "$oid": "6023aa5997d9ac00156d8b19" },
-      "name": "ashi",
-      "username": "ashi5",
-      "email": "ashi5@email.com",
-      "pass": "$2b$10$KQ2YV6R3Gh62YhNftUDz6.nDJtXkTI9AMhniWE0X8fCihcKLKQJgm",
-      "dateCreated": { "$date": { "$numberLong": "1612950105655" } },
-      "active": true,
-      "token": "eyJhbGciOiJIUzI1NiJ9.NjAyM2FhNTk5N2Q5YWMwMDE1NmQ4Yjg3.7OhMYn5om5jCNA6D8_UKkQsiv4VAjN2kMZu47zPC8XM",
-      "__v": { "$numberInt": "0" }
-    },
-    {
-      "_id": { "$oid": "6023aa5997d9ac00156d8b26" },
-      "name": "ashi",
-      "username": "ashi6",
-      "email": "ashi6@email.com",
-      "pass": "$2b$10$KQ2YV6R3Gh62YhNftUDz6.nDJtXkTI9AMhniWE0X8fCihcKLKQJgm",
-      "dateCreated": { "$date": { "$numberLong": "1612950105655" } },
-      "active": true,
-      "token": "eyJhbGciOiJIUzI1NiJ9.NjAyM2FhNTk5N2Q5YWMwMDE1NmQ4Yjg3.7OhMYn5om5jCNA6D8_UKkQsiv4VAjN2kMZu47zPC8XM",
-      "__v": { "$numberInt": "0" }
-    }
-  ]
-}
+[
+  {
+    "_id": { "$oid": "6023aa5997d9ac00156d8b87" },
+    "name": "ashi",
+    "username": "ashi",
+    "email": "ashi@email.com",
+    "pass": "$2b$10$KQ2YV6R3Gh62YhNftUDz6.nDJtXkTI9AMhniWE0X8fCihcKLKQJgm",
+    "dateCreated": { "$date": { "$numberLong": "1612950105655" } },
+    "active": true,
+    "token": "eyJhbGciOiJIUzI1NiJ9.NjAyM2FhNTk5N2Q5YWMwMDE1NmQ4Yjg3.7OhMYn5om5jCNA6D8_UKkQsiv4VAjN2kMZu47zPC8XM",
+    "__v": { "$numberInt": "0" }
+  },
+  {
+    "_id": { "$oid": "60267545e1a94a00157d8567" },
+    "name": "ashi2",
+    "username": "ashi2",
+    "email": "ashi2@email.com",
+    "pass": "$2b$10$xf9vQBUt90DgDjE.chv1MOLybqYZmjJYN0Fw6RjKpUQ824/4Yhsje",
+    "dateCreated": { "$date": { "$numberLong": "1613133125100" } },
+    "active": true,
+    "token": "eyJhbGciOiJIUzI1NiJ9.NjAyNjc1NDVlMWE5NGEwMDE1N2Q4NTY3.Izk4t258f_HQzA09f9LFw658FXk8OQ3V-DU-wIZA-TE",
+    "__v": { "$numberInt": "0" }
+  },
+  {
+    "_id": { "$oid": "60267618e1a94a00157d8568" },
+    "name": "ashi3",
+    "username": "ashi3",
+    "email": "ashi3@email.com",
+    "pass": "$2b$10$omEvjlplKIyTP.6uhHzIZezovQyyYQi0ikrpqBY9mDZdT4j8n4gUK",
+    "dateCreated": { "$date": { "$numberLong": "1613133336261" } },
+    "active": true,
+    "token": "eyJhbGciOiJIUzI1NiJ9.NjAyNjc2MThlMWE5NGEwMDE1N2Q4NTY4.9Vco5L8lvbJlm1Ey29wgkJkQJzrUYttr-f7KYwz4Kx8",
+    "__v": { "$numberInt": "0" }
+  },
+  {
+    "_id": { "$oid": "60267662e1a94a00157d8569" },
+    "name": "ashi4",
+    "username": "ashi4",
+    "email": "ashi4@email.com",
+    "pass": "$2b$10$UtjN/O1wyurKGhGSYWEmk.eoXn16kEtTnEf6DJZ.ecb5G70gtjt5G",
+    "dateCreated": { "$date": { "$numberLong": "1613133410947" } },
+    "active": true,
+    "token": "eyJhbGciOiJIUzI1NiJ9.NjAyNjc2NjJlMWE5NGEwMDE1N2Q4NTY5._f3qpTzMvt8zHc66_ct-reZaFJPRpX3KgfUUdQauD0U",
+    "__v": { "$numberInt": "0" }
+  }
+]
