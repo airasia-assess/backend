@@ -76,6 +76,38 @@ db design
       },
       data: String
     }
+    
+  3. roles
+    {
+      code: {
+        type: String,
+        required: true,
+        maxlength: 6,
+        minlength: 2,
+        unique: true,
+      },
+      name: {
+        type: String,
+        required: true,
+        maxlength: 60,
+        minlength: 6
+      },
+      permissions: {
+        type: [String],
+        required: true
+      },
+      dateCreated: {
+        type: Date,
+        required: true,
+        default: new Date()
+      },
+      active: {
+        type: Boolean,
+        required: true,
+        default: true
+      },
+      data: String,
+    }
 
 apis instructions:
 - '/api/auth/signup': post method
@@ -90,7 +122,7 @@ apis instructions:
     {
         "success": false or true,
         "errMsg": "error message if exists",
-        "token": "eyJhbGciOiJIUzI1NiJ9.NjAwYWVjNGMzMGM5Y2YxNDA2YmMwN2Ex.I3y1MhBR3lXfoGby..."
+        "token": "token if signup op is successful"
     }
     
 - '/api/auth/login': post method
@@ -119,7 +151,7 @@ apis instructions:
     {
         "success": false or true,
         "errMsg": "error message if exists",
-        "permission": "permission description"
+        "permission": "permission description if create op is successful"
     }
     
 - '/api/permission/permissions': get method
@@ -133,6 +165,23 @@ apis instructions:
             list of permissions
           }
         ]
+    }
+    
+ - '/api/role/roles': post method
+  1. request body
+    {
+      "code": "role code",
+      "name": "role name",
+      "permissions": [
+          "permission code",
+          "permission code"
+      ]
+    }
+  2. response body
+    {
+      "success": false or true,
+      "errMsg": "error message if exists",
+      "role": "role description if create op is successful"
     }
     
 deploy backend on minikube:
