@@ -186,8 +186,8 @@ apis instructions:
     
 deploy backend on minikube:
   - after starting minikube, To see the kubectl configuration use the command: kubectl config view
-  - create a deployment: kubectl create -f auth-service --image=19860906/auth-service:latest
-  - we’re going live through Kubernetes service object: kubectl expose deployment auth-service --type="LoadBalancer"
+  - create a deployment: kubectl create deployment --image=19860906/auth-service:latest auth-service
+  - we’re going live through Kubernetes service object: kubectl expose deployment auth-service --type="LoadBalancer" --port=1039
   - getting an external IP:
     1. kubectl apply -f https://raw.githubusercontent.com/google/metallb/v0.9.3/manifests/namespace.yaml
     2. kubectl apply -f https://raw.githubusercontent.com/google/metallb/v0.9.3/manifests/metallb.yaml # On the first install only
@@ -195,7 +195,7 @@ deploy backend on minikube:
   - run command: kubectl create -f configmap.yaml
   - we have to delete the svc and create the service again:
     1. Kubectl delete service auth-service
-    2. kubectl expose deployment auth-service --type="LoadBalancer"
+    2. kubectl expose deployment auth-service --type="LoadBalancer" --port=1039
   - you can get the minikube api url via: minikube ip
     The API server runs on 8443 by default.
   
